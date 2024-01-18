@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Teoria complementi - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{background-color:#eaffea;color:#55a532}.hljs-deletion{background-color:#ffecec;color:#bd2c00}.hljs-link{text-decoration:underline}.markdown-body{word-wrap:break-word;font-size:16px;line-height:1.5}.markdown-body:after,.markdown-body:before{content:"";display:table}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-bottom:16px;margin-top:0}.markdown-body hr{background-color:#e7e7e7;border:0;height:.25em;margin:24px 0;padding:0}.markdown-body blockquote{border-left:.25em solid #ddd;color:#777;font-size:16px;padding:0 1em}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb;color:#555;display:inline-block;font-size:11px;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{border-bottom:1px solid #eee;padding-bottom:.3em}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{color:#777;font-size:.85em}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{list-style-type:none;padding:0}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-bottom:0;margin-top:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{font-size:1em;font-style:italic;font-weight:700;margin-top:16px;padding:0}.markdown-body dl dd{margin-bottom:16px;padding:0 16px}.markdown-body table{display:block;overflow:auto;width:100%;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{border:1px solid #ddd;padding:6px 13px}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{background-color:#fff;box-sizing:initial;max-width:100%}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{background-color:initial;max-width:none;vertical-align:text-top}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{border:1px solid #ddd;display:block;float:left;margin:13px 0 0;overflow:hidden;padding:7px;width:auto}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{clear:both;color:#333;display:block;padding:5px 0 0}.markdown-body span.align-center{clear:both;display:block;overflow:hidden}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{clear:both;display:block;overflow:hidden}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{background-color:#0000000a;border-radius:3px;font-size:85%;margin:0;padding:.2em 0}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{content:"\00a0";letter-spacing:-.2em}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{background:#0000;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{border-radius:3px;font-size:85%;line-height:1.45;overflow:auto}.markdown-body:not(.next-editor) pre{background-color:#f7f7f7;padding:16px}.markdown-body pre code,.markdown-body pre tt{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{font-size:12px;line-height:1;overflow:hidden;padding:5px;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{background:#fff;border:0;padding:10px 8px 9px;text-align:right}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{background:#f8f8f8;border-top:0;font-weight:700}.news .alert .markdown-body blockquote{border:0;padding:0 0 0 40px}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{cursor:default!important;float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle}.markdown-body{max-width:758px;overflow:visible!important;padding-bottom:40px;padding-top:40px;position:relative}.markdown-body.next-editor{overflow-x:hidden!important}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{border-right:3px solid #6ce26c!important;box-sizing:initial;color:#afafaf!important;cursor:default;display:inline-block;min-width:20px;padding:0 8px 0 0;position:relative;text-align:right;z-index:4}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-bottom:none;border-left:none;border-top:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-collapse:inherit!important;border-spacing:0}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{margin-bottom:unset;overflow:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert{display:flex;flex-direction:column;gap:16px}.markdown-body .alert>*{margin:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{background-color:inherit;border-radius:0;overflow:visible;text-align:center;white-space:inherit}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{height:100%;max-width:100%}.markdown-body pre>code.wrap{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{background-color:#000;background-position:50%;background-repeat:no-repeat;background-size:contain;cursor:pointer;display:table;overflow:hidden;text-align:center}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{object-fit:contain;width:100%;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{height:100%;left:0;position:absolute;top:0;width:100%}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{color:#fff;height:auto;left:50%;opacity:.3;position:absolute;top:50%;transform:translate(-50%,-50%);transition:opacity .2s;width:auto;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.figma{display:table;padding-bottom:56.25%;position:relative;width:100%}.figma iframe{border:1px solid #eee;bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.markmap-container{height:300px}.markmap-container>svg{height:100%;width:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{color:#777;margin:25px auto -25px;max-width:760px;position:relative;z-index:2}.toc .invisable-node{list-style-type:none}.ui-toc{bottom:20px;position:fixed;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{border-bottom-left-radius:0;border-top-left-radius:0;height:40px;padding:10px 4px}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{color:#fff;opacity:1;transition:opacity .2s}.ui-toc-label:focus{background-color:#ccc;color:#000;opacity:.3}.ui-toc-label:hover{background-color:#ccc;opacity:1;transition:opacity .2s}.ui-toc-dropdown{margin-bottom:20px;margin-top:20px;max-height:70vh;max-width:45vw;overflow:auto;padding-left:10px;padding-right:10px;text-align:inherit;width:25vw}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{letter-spacing:.0029em;padding-right:0}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{color:#767676;display:block;font-size:13px;font-weight:500;padding:4px 20px}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{background-color:initial;border-left:1px solid #000;color:#000;padding-left:19px;text-decoration:none}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{border-left:none;border-right:1px solid #000;padding-right:19px}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{background-color:initial;border-left:2px solid #000;color:#000;font-weight:700;padding-left:18px}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{border-left:none;border-right:2px solid #000;padding-right:18px}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:30px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:40px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{font-weight:500;padding-left:28px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{font-weight:500;padding-left:38px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{max-height:70vh;max-width:15vw;overflow:auto;position:fixed;top:0}.back-to-top,.expand-toggle,.go-to-bottom{color:#999;display:block;font-size:12px;font-weight:500;margin-left:10px;margin-top:10px;padding:4px 10px}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{background-position:50%;background-repeat:no-repeat;background-size:cover;border-radius:50%;display:block;height:20px;margin-bottom:2px;margin-right:5px;margin-top:2px;width:20px}.ui-user-icon.small{display:inline-block;height:18px;margin:0 0 .2em;vertical-align:middle;width:18px}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;padding-left:22px;text-decoration:none}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}.inline-spoiler-section{cursor:pointer}.inline-spoiler-section .spoiler-text{background-color:#333;border-radius:2px}.inline-spoiler-section .spoiler-text>*{opacity:0}.inline-spoiler-section .spoiler-img{filter:blur(10px)}.inline-spoiler-section.raw{background-color:#333;border-radius:2px}.inline-spoiler-section.raw>*{opacity:0}.inline-spoiler-section.unveil{cursor:auto}.inline-spoiler-section.unveil .spoiler-text{background-color:#3333331a}.inline-spoiler-section.unveil .spoiler-text>*{opacity:1}.inline-spoiler-section.unveil .spoiler-img{filter:none}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{color:#222;position:relative;z-index:1}.markdown-body.slides:before{background-color:currentColor;bottom:0;box-shadow:0 0 0 50vw;content:"";display:block;left:0;position:absolute;right:0;top:0;z-index:-1}.markdown-body.slides section[data-markdown]{background-color:#fff;margin-bottom:1.5em;position:relative;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{left:1em;max-height:100%;overflow:hidden;position:absolute;right:1em;top:50%;transform:translateY(-50%)}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{border:3px solid #777;content:"";height:1.5em;position:absolute;right:1em;top:-1.5em}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}svg{text-shadow:none}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Teoria-complementi" data-id="Teoria-complementi"><a class="anchor hidden-xs" href="#Teoria-complementi" title="Teoria-complementi"><span class="octicon octicon-link"></span></a><span>Teoria complementi</span></h1><h3 id="Pdf1---Tipizzazione" data-id="Pdf1---Tipizzazione"><a class="anchor hidden-xs" href="#Pdf1---Tipizzazione" title="Pdf1---Tipizzazione"><span class="octicon octicon-link"></span></a><span>Pdf1 - Tipizzazione</span></h3><p><span>In python è tutto orientato sugli oggetti, anche le vari tipi primitivi hanno funzione e oggetti.</span></p><p><span>Di conseguenza esistono le regole base della programmazione, tra cui l’</span><strong><span>ereditarietà</span></strong><span> e il </span><strong><span>polimorfismo</span></strong><span>.</span></p><p><span>Creandosi cosi un problema comune in python, Quale funzione chiamare per il compilatore sulle figlie ereditarie.</span></p><pre><code class="python hljs"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Moto</span> extends Veicolo
+    getRoute(): <span class="hljs-keyword">return</span> <span class="hljs-number">2</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Auto</span> extends Veicolo
+    getRoute(): <span class="hljs-keyword">return</span> <span class="hljs-number">4</span>
+
+Veicolo v = getVeicolo() //ritorno o Auto o Moto
+
+v.getRoute() // risultato?
+</code></pre><p><span>Python utilizza il metodo del “</span><strong><span>Duck typing</span></strong><span>”, che effettua dei controlli non sul tipo richiamato, ma che l’oggetto abbia tale metodo.</span></p><pre><code class="python hljs">function calcola(a,b,c) =&gt; <span class="hljs-keyword">return</span> (a+b)*c
+e1 = calcola(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
+e2 = calcola([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],<span class="hljs-number">2</span>)
+e3 = calcola(‘mele ’, ‘e arance’, <span class="hljs-number">3</span>)
+</code></pre><p><strong><span>risultati</span></strong></p><pre><code>e1 → 9
+e2 → [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
+e3 → “mele e arance mele e arance mele e arance”
+</code></pre><h3 id="Pdf3---Tipi-di-base" data-id="Pdf3---Tipi-di-base"><a class="anchor hidden-xs" href="#Pdf3---Tipi-di-base" title="Pdf3---Tipi-di-base"><span class="octicon octicon-link"></span></a><span>Pdf3 - Tipi di base</span></h3><p><span>Esistono diversi tipi di oggetti presenti all’interno di python, partendo dai built-in:</span></p><ul>
+<li><strong><span>Numerics</span></strong><span>: che si intendono la classe dei valori numerici (int, float, …)</span></li>
+<li><strong><span>Sequence</span></strong><span> (str, liste e tuple)</span></li>
+<li><strong><span>Set</span></strong><span>: fa parte degli insiemi</span></li>
+<li><strong><span>Dict</span></strong><span>: dizionari con coppia chiave valore</span></li>
+</ul><p><span>Per i tipi </span><strong><span>Numerics</span></strong><span> è possibile effetuare qualunque tipo di operazione aritmetica, usare diversi metodi presente come pow(), math.floor(), …</span></p><hr><p><span>Per i tipi </span><strong><span>Sequence</span></strong><span>:</span></p><ul>
+<li>
+<p><span>Le </span><strong><span>stringhe</span></strong><span> vengono rinchiuse nelle virgolette ed è possibile effettuare:</span></p>
+<ul>
+<li><strong><span>operazioni di accesso agli elementi</span></strong><span> come qualsiasi linguaggio(</span><span class="mathjax raw">\(a[1]\)</span><span>)</span></li>
+<li><strong><span>effettuare delle concatenazioni</span></strong><span> con piu stringhe utilizzando il “+” (‘a’+‘b’ = ‘ab’)</span></li>
+<li><strong><span>operazioni di ripetizioni</span></strong><span>, per riperete sempre la stessa stringa piu volte (‘a’*4 = ‘aaaa’)</span></li>
+<li><strong><span>lunghezza</span></strong><span> tramite il metodo “len(</span><code>&lt;stringa&gt;</code><span>)”</span></li>
+<li><strong><span>Join</span></strong><span>: concatenare diversi elementi aggiungendo un separatore (</span><code>';'.join([1,2,3]) = "1;2;3"</code><span>)</span></li>
+<li><strong><span>Split</span></strong><span>: Splittara una stringa tramite un separatore (</span><code>'1+2+3+4+5'.split(+) = ['1','2','3','4','5']</code><span>)</span></li>
+</ul>
+</li>
+<li>
+<p><span>Le </span><strong><span>liste</span></strong><span> sono dei </span><strong><span>contenitori di elementi di qualsiasi tipo</span></strong><span> e vengono racchiuse tra le quadre </span><code>'[]'</code><span> e si possono utilizzare dei metodi gia all’interno di Python che </span><strong><span>possono</span></strong><span> </span><strong><span>renderle</span></strong><span> delle </span><strong><span>code</span></strong><span> (come </span><code>lista.append(oggetto)</code><span> e </span><code>lista.pop(indice)</code><span>) oppure degli </span><strong><span>stack</span></strong><span> (</span><code>lista.append(oggetto)</code><span> e </span><code>lista.pop()</code><span>). E’ possibile anche fare delle operazioni di Slicing cioè copiare da una lista di partenza una sottolista a scelta: (</span><code>wt_slice = wt[1(start):3(stop)] -&gt; [2,3]</code><span>). Non viene utilizzato l’uguale tra due liste per fare la copiatura perchè si effettua copie per </span><strong><span>riferimento.</span></strong></p>
+</li>
+<li>
+<p><span>Le </span><strong><span>Tuple</span></strong><span> sono </span><strong><span>immutabili</span></strong><span> (cioè non modificabili) come le stringhe e vengono racchiuse all’interno delle tonde (</span><code>es: tup1=('one', 'two', 21)</code><span>)</span></p>
+</li>
+</ul><hr><p><span>Per il tipo </span><strong><span>Set</span></strong><span>, si intende un insieme di oggetti non ordinati e non replicati (non può esistere piu di una volta l’oggetto).</span></p><p><span>Si creano con la funzione set() o {elem, elem}: </span><code>a = set() o b=set([lista]) o c={1,2}</code></p><p><span>Vengono utilizzati per </span><strong><span>eliminare</span></strong><span> i </span><strong><span>duplicati</span></strong><span> all’</span><strong><span>interno da una lista</span></strong><span> e per i </span><strong><span>test di appartenenza</span></strong></p><p><span>E si utilizzano i diversi tipi di cardinalità.</span></p><hr><p><span>Per il tipo </span><strong><span>Dictionary</span></strong><span>, si intende un oggetto di associazione </span><strong><span>chiave valore</span></strong><span> per piu elementi e vengono racchiuse tramite graffe</span></p><p><span>Si crea tramite “{}” o dict(): </span><code>a={}, b=dict() b={'chiave':'valore'}</code></p><p><span>Le </span><strong><span>chiavi</span></strong><span> all’interno del dizionario sono </span><strong><span>uniche</span></strong><span>.</span></p><p><span>I metodi piu importanti sono:</span></p><ul>
+<li><strong><span>.keys()</span></strong><span>: tutta la lista delle chiavi all’interno del dict</span></li>
+<li><strong><span>.values()</span></strong><span>: tutta la lista dei valori all’interno di dict</span></li>
+<li><strong><span>del a[chiave]</span></strong><span>: elimina la chiave e il valore dal dizionario</span></li>
+<li><strong><span>.pop(chiave)</span></strong><span>: elimina e restituisce il valore</span></li>
+<li><strong><span>.has_key(chiave)</span></strong><span>: true se è presenta la chiave nel dizionario</span></li>
+</ul><h3 id="Pdf4---Costrutti-di-base" data-id="Pdf4---Costrutti-di-base"><a class="anchor hidden-xs" href="#Pdf4---Costrutti-di-base" title="Pdf4---Costrutti-di-base"><span class="octicon octicon-link"></span></a><span>Pdf4 - Costrutti di base</span></h3><p><span>In python il blocco di codice è caratterizzato da:</span></p><ul>
+<li><span>L’inizio dei “:” (per poi andare a capo)</span></li>
+<li><span>deve essere identato per perfettamente dall’inizio alla fine e la fine dell’identazione indica la fine del blocco</span></li>
+</ul><p><span>In </span><strong><span>python non si usano i “:”</span></strong><span> per indicare la fine di un’istruzione, basta andare a capo</span></p><pre><code>b=0
+b=b+1
+
+b=1; b=b+1 # possibilità di mettere piu
+operazioni insieme
+</code></pre><p><span>E’ </span><strong><span>possibile anche effettuare degli import</span></strong><span> da moduli esterni (librerie) per utilizzarle nel codice</span></p><pre><code class="python hljs"><span class="hljs-keyword">import</span> pandas
+a=pandas.DataFrame()
+
+<span class="hljs-comment"># si può anche rinominare l'import</span>
+
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+a=pd.DataFrame()
+
+<span class="hljs-comment"># anche una solo modulo specifico</span>
+<span class="hljs-keyword">from</span> pandas <span class="hljs-keyword">import</span> DataFrame
+a= DataFrame()
+
+<span class="hljs-comment"># anche tutti i moduli</span>
+
+<span class="hljs-keyword">from</span> pandas <span class="hljs-keyword">import</span> *
+a=DataFrame()
+</code></pre><p><span>I commenti si fanno con “#”</span></p><h4 id="Costrutti-e-cicli" data-id="Costrutti-e-cicli"><a class="anchor hidden-xs" href="#Costrutti-e-cicli" title="Costrutti-e-cicli"><span class="octicon octicon-link"></span></a><span>Costrutti e  cicli</span></h4><h5 id="Costrutto-if" data-id="Costrutto-if"><a class="anchor hidden-xs" href="#Costrutto-if" title="Costrutto-if"><span class="octicon octicon-link"></span></a><span>Costrutto if</span></h5><pre><code class="python hljs"><span class="hljs-keyword">if</span> condizione:
+  codice
+<span class="hljs-keyword">else</span>:
+  codice
+</code></pre><p><span>oppure possibilità di aggiungere un elif:</span></p><pre><code class="python hljs"><span class="hljs-keyword">if</span> condizione:
+  codice
+<span class="hljs-keyword">elif</span>:
+  codice
+<span class="hljs-keyword">else</span>:
+  codice
+</code></pre><h5 id="Costrutto-while" data-id="Costrutto-while"><a class="anchor hidden-xs" href="#Costrutto-while" title="Costrutto-while"><span class="octicon octicon-link"></span></a><span>Costrutto while</span></h5><p><span>Effettua affinche sia vera</span></p><pre><code class="python hljs"><span class="hljs-keyword">while</span> condizione:
+  codice
+</code></pre><p><span>possibilità di aggiungere un else, quando esce va nell’else:</span></p><pre><code class="python hljs"><span class="hljs-keyword">while</span> condizione:
+    codice
+<span class="hljs-keyword">else</span>:
+    codice
+  
+</code></pre><h5 id="Costrutto-for" data-id="Costrutto-for"><a class="anchor hidden-xs" href="#Costrutto-for" title="Costrutto-for"><span class="octicon octicon-link"></span></a><span>Costrutto for</span></h5><p><span>Ciclo che esegue su tutti gli elementi nell’elenco</span></p><pre><code class="python hljs"><span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> elenco:
+    <span class="hljs-built_in">print</span>(a)
+</code></pre><p><span>possibilità di aggiungere un else, quando esce va nell’else</span></p><pre><code class="python hljs"><span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> elenco:
+   <span class="hljs-built_in">print</span>(a)
+<span class="hljs-keyword">else</span>:
+   <span class="hljs-built_in">print</span>(<span class="hljs-string">'vuoto'</span>)
+</code></pre><p><span>Ogni </span><strong><span>ciclo for può iterare</span></strong><span> in modo diverso a seconda dell’elemento su cui si itera.</span></p><p><span>Il tipico utilizzo è iterare su numeri ordinati e si utilizza la funzione </span><strong><span>range(n)</span></strong><span>:</span></p><pre><code class="python hljs"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):
+    <span class="hljs-built_in">print</span>(i)
+    
+<span class="hljs-comment"># output</span>
+<span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+<span class="hljs-number">3</span>
+...
+<span class="hljs-number">10</span>
+</code></pre><p><span>Il </span><strong><span>ciclo for</span></strong><span> sulle </span><strong><span>liste</span></strong><span> e per le </span><strong><span>tuple</span></strong><span> è per ogni </span><strong><span>interazione</span></strong><span> vi è il riferimento ad un oggetto della lista</span></p><pre><code class="python hljs">a = [<span class="hljs-string">'a'</span>,<span class="hljs-string">'b'</span>] <span class="hljs-comment"># ('a','b')</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a:
+    <span class="hljs-built_in">print</span>(i)
+    
+<span class="hljs-comment"># output</span>
+a
+b
+
+</code></pre><p><span>Il </span><strong><span>ciclo for per le stringhe</span></strong><span> è il riferimento per </span><strong><span>ogni singolo carattere</span></strong><span> all’interno della stringa</span></p><pre><code class="python hljs">a = <span class="hljs-string">'cd'</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a:
+    <span class="hljs-built_in">print</span>(i)
+    
+<span class="hljs-comment"># output</span>
+c
+d
+</code></pre><p><span>Il </span><strong><span>ciclo for per i set</span></strong><span> è il riferimento ad un elemento dell’insieme presente nella lista e </span><strong><span>l’ordine non è garantito</span></strong></p><pre><code class="python hljs">a = <span class="hljs-built_in">set</span>[(<span class="hljs-string">'a'</span>,<span class="hljs-string">'b'</span>)]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a:
+    <span class="hljs-built_in">print</span>(i)
+    
+<span class="hljs-comment"># output</span>
+b
+a
+</code></pre><p><span>Il </span><strong><span>ciclo for per i dictionary</span></strong><span> è il riferimento ad una chiave dell’insieme presente nel dict e </span><strong><span>l’ordine non è garantito</span></strong></p><pre><code class="python hljs">a = <span class="hljs-built_in">dict</span>{<span class="hljs-string">'k1'</span>:<span class="hljs-number">1</span>, <span class="hljs-string">'k2'</span>:<span class="hljs-number">2</span>}
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a:
+    <span class="hljs-built_in">print</span>(i)
+    
+<span class="hljs-comment"># output</span>
+k1
+k2
+</code></pre><p><span>E’ possibile anche usare </span><strong><span>enumerate()</span></strong><span> che enumera la sequenza su cui itera</span></p><pre><code class="python hljs">a = <span class="hljs-string">'abc'</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(a):
+    <span class="hljs-built_in">print</span>(i)
+    
+<span class="hljs-comment"># output</span>
+(<span class="hljs-number">0</span>, <span class="hljs-string">'a'</span>)
+(<span class="hljs-number">1</span>, <span class="hljs-string">'b'</span>)
+(<span class="hljs-number">2</span>, <span class="hljs-string">'c'</span>)
+</code></pre><p><span>E’ possibile anche </span><strong><span>dividere su due variabili il risultato</span></strong><span> dell’</span><strong><span>enumerate</span></strong><span>()</span></p><pre><code class="python hljs">a = <span class="hljs-string">'abc'</span>
+<span class="hljs-keyword">for</span> i,o <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(a):
+    <span class="hljs-built_in">print</span>(i)
+    
+<span class="hljs-comment"># output</span>
+<span class="hljs-number">0</span>
+<span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+</code></pre><p><span>In pratica si può iterare moltissimi tipi di elenchi, l’importante che siano </span><strong><span>iterabili</span></strong><span>, per considerarsi tali devono avere il </span><strong><span>metodo</span></strong><span> </span><code>__iter__()</code><span> che ritorna un iterabile e il </span><strong><span>metodo</span></strong><span> </span><code>__next__()</code><span> che ritorna il numero successivo.</span><br>
+<span>(chiamasi due </span><strong><span>wrapper</span></strong><span>)</span></p><p><span>(Esistono anche le versioni migliori che sono </span><code>iter() e next()</code><span>)</span></p><h4 id="Condizioni-di-salto" data-id="Condizioni-di-salto"><a class="anchor hidden-xs" href="#Condizioni-di-salto" title="Condizioni-di-salto"><span class="octicon octicon-link"></span></a><span>Condizioni di salto</span></h4><p><span>Esistono le solite condizioni di salto:</span></p><ul>
+<li><strong><span>Break</span></strong><span>: interrompe un ciclo</span></li>
+<li><strong><span>Continue</span></strong><span>: ne salta uno</span></li>
+</ul><h3 id="Pdf5---Funzioni" data-id="Pdf5---Funzioni"><a class="anchor hidden-xs" href="#Pdf5---Funzioni" title="Pdf5---Funzioni"><span class="octicon octicon-link"></span></a><span>Pdf5 - Funzioni</span></h3><p><span>In python esistono le funzioni e si definiscono con la parola chiave </span><strong><span>def</span></strong></p><p><span>La funzione rappresenta un blocco di codice:</span></p><pre><code class="python hljs"><span class="hljs-keyword">def</span> <span class="hljs-title function_">funzione</span>(<span class="hljs-params">arg1, arg2</span>):
+    <span class="hljs-built_in">print</span>(arg1)
+    <span class="hljs-built_in">print</span>(arg2)
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+</code></pre><p><span>Ovviamente </span><strong><span>non</span></strong><span> si </span><strong><span>specificano</span></strong><span> nè i tipi dei parametri nè nel return.</span></p><pre><code class="python hljs"><span class="hljs-keyword">def</span> <span class="hljs-title function_">fib</span>(<span class="hljs-params">n</span>):
+    a, b = <span class="hljs-number">0</span>, <span class="hljs-number">1</span>
+    <span class="hljs-built_in">print</span>(a)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
+        <span class="hljs-built_in">print</span>(b)
+        a, b = b, a + b
+</code></pre><p><span>E’ possibile definire dei parametri opzionali che assumono un valore di default se non vengono invocati</span></p><pre><code class="python hljs"><span class="hljs-keyword">def</span> <span class="hljs-title function_">fun</span>(<span class="hljs-params">arg1, arg2=<span class="hljs-number">0</span></span>):
+...
+</code></pre><p><span>Su python si può usare la </span><strong><span>notazione posizionale</span></strong><span>, quindi si </span><strong><span>intende che al richiamo della funzione si utilizzino le stesse posizioni degli argomenti della funzione</span></strong><span> (come su qualunque lnguaggio).</span></p><p><span>Ma si </span><strong><span>possono anche specificare a quale parametro ci si riferisce</span></strong><span> (keyword arguments)</span></p><pre><code class="python hljs">a=fib(arg2=<span class="hljs-number">3</span>, args1=<span class="hljs-number">1</span>)
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">fib</span>(<span class="hljs-params">arg1, arg2</span>):
+    ...
+</code></pre><p><span>Si può anche fare una </span><strong><span>fusione delle due metodi</span></strong></p><p><span>Si utilizza l’</span><strong><span>operatore</span></strong><span> “*” </span><strong><span>anteposto</span></strong><span> ad un </span><strong><span>dizionario</span></strong><span> per ‘spacchettare’ sequenze e passare ogni elemento come notazione posizionale.</span></p><pre><code class="python hljs">a=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">fib</span>(<span class="hljs-params">*a</span>): -&gt; fib(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>)
+    ...
+</code></pre><p><span>Si utilizza l’operatore “**” </span><strong><span>anteposto</span></strong><span> ad un dizionario per ‘spacchettare’ ogni </span><strong><span>elemento come se fosse un keyword arguments</span></strong></p><pre><code class="python hljs">a={k1:<span class="hljs-number">3</span>, k2:<span class="hljs-number">5</span>}
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">fib</span>(<span class="hljs-params">**a</span>): -&gt; fib(k1=<span class="hljs-number">3</span>, k2=<span class="hljs-number">5</span>)
+    ...
+</code></pre><p><span>Gli </span><strong><span>operatori</span></strong><span> appena visti vengono anche utilizzati per la definizioni di due particolari parametri:</span></p><pre><code class="python hljs"><span class="hljs-keyword">def</span> <span class="hljs-title function_">fib</span>(<span class="hljs-params">*args, **kwargs</span>):
+    ...
+</code></pre><p><strong><span>*args</span></strong><span> si intende tutti i parametri passati alla funzione vengono condensati all’interno di args.</span></p><p><strong><span>**kwargs</span></strong><span> tutti gli arguments vengono condensati in un dizionario kwargs.</span></p><p><span>(utile se non si sa a priori il numero esatto dei parametri)</span></p><p><span>esempio:</span></p><pre><code class="python hljs"><span class="hljs-comment"># arg1 e arg2 non saranno presenti in args</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">fib</span>(<span class="hljs-params">arg1, arg2, *args, **kwargs</span>): 
+</code></pre><p><span>Python è un </span><strong><span>linguaggio di ordine superiore</span></strong><span>, cioè che </span><strong><span>consente l’utilizzo di funzione come valori</span></strong><span>, infatti posso </span><strong><span>passare una funzione ad altre funzione</span></strong><span> e posso fare ritornare come risultato altre funzioni</span></p><pre><code class="python hljs"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_print_help_function</span>(<span class="hljs-params">lang</span>):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">eng_help</span>():
+        <span class="hljs-built_in">print</span>(‘<span class="hljs-built_in">help</span>’)
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ita_help</span>():
+        <span class="hljs-built_in">print</span>(‘aiuto’)
+    <span class="hljs-keyword">if</span> lang == ‘eng’:
+        <span class="hljs-keyword">return</span> eng_help
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> ita_help
+</code></pre><p><span>I valori di ritorno sono funzioni</span></p><h4 id="Concetto-di-Closure" data-id="Concetto-di-Closure"><a class="anchor hidden-xs" href="#Concetto-di-Closure" title="Concetto-di-Closure"><span class="octicon octicon-link"></span></a><span>Concetto di Closure</span></h4><p><span>Supponiamo di voler avere una funzione inizializzabile che possa stampare sempre lo stesso messaggio quando viene chiamata</span></p><p><span>Prendiamo come parametro della funzione madre il messaggio poi nella funzione figlio stampiamo il messaggio.</span></p><pre><code class="python hljs"><span class="hljs-keyword">def</span> <span class="hljs-title function_">print_msg</span>(<span class="hljs-params">msg</span>):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">printer</span>():
+        <span class="hljs-built_in">print</span>(msg)
+    <span class="hljs-keyword">return</span> printer
+
+<span class="hljs-comment">#printer deve prendere "msg" per poter printare il messaggio.</span>
+</code></pre><p><span>Ed è proprio questo il concetto di CLOSURE, le </span><strong><span>funzioni innestate</span></strong><span> possono accedere alle</span><br>
+<span>variabili delle funzioni madri.</span><br>
+<span>Tali </span><strong><span>variabili vengono incapsulate nelle funzioni figlie</span></strong><span> in modo che possano essere utilizzate</span><br>
+<span>anche quando la funzione madre termina.</span></p><h3 id="Pdf6---Funzioni-2" data-id="Pdf6---Funzioni-2"><a class="anchor hidden-xs" href="#Pdf6---Funzioni-2" title="Pdf6---Funzioni-2"><span class="octicon octicon-link"></span></a><span>Pdf6 - Funzioni (2)</span></h3><h4 id="Scope" data-id="Scope"><a class="anchor hidden-xs" href="#Scope" title="Scope"><span class="octicon octicon-link"></span></a><span>Scope</span></h4><p><span>Esistono diversi tipi di scope presenti in python.</span></p><ul>
+<li><strong><span>Built-in</span></strong><span>: entità sempre disponibili, esempio: </span><strong><span>print</span></strong></li>
+<li><strong><span>Global Scope</span></strong><span>: entità definite in blocco (non dentro a funzioni o blocchi)</span></li>
+<li><strong><span>Enclosing Scope</span></strong><span>: entità incapsulate per effetto della closure</span></li>
+<li><strong><span>Local Scope</span></strong><span>:  entità definite dentro il blocco in cui si è</span></li>
+</ul><pre><code class="python hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">'ciao'</span>) <span class="hljs-comment">#built-in</span>
+
+a = <span class="hljs-number">1</span> <span class="hljs-comment"># global scope</span>
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">encaps</span>():
+    b=<span class="hljs-number">2</span>  <span class="hljs-comment"># b enclosing scope</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">local</span>():
+        c=<span class="hljs-number">3</span>+b <span class="hljs-comment"># local scope</span>
+        
+        
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">another</span>():
+    d = <span class="hljs-number">0</span>    <span class="hljs-comment"># d non si vede da nessuno delle parti sopra</span>
+</code></pre><p><span>Il meccanismo di visione di python funziona cosi:</span></p><ul>
+<li><span>Si parte dal </span><strong><span>local</span></strong></li>
+<li><span>si guarda </span><strong><span>enclosed</span></strong></li>
+<li><span>poi </span><strong><span>global scope</span></strong></li>
+<li><span>infine il </span><strong><span>builtin</span></strong></li>
+</ul><p><span>Chiamando le variabili con lo stesso nome si nasconde quelle degli scope piu esterno, si guarda lo scope piu interno e se solo non vi è si guarda quelli successivi.</span></p><p><span>Si può forzare l’utilizzo di un’entità dello scope globale con la parola chiave </span><strong><span>global</span></strong></p><pre><code class="py hljs">print(‘ciao’)
+x = <span class="hljs-number">1</span>
+
+<span class="hljs-function">def <span class="hljs-title">encaps</span>():
+    x</span> = <span class="hljs-number">2</span>
+    <span class="hljs-function">def <span class="hljs-title">local</span>():
+        <span class="hljs-keyword">global</span> x
+        x</span> = <span class="hljs-number">3</span>
+
+<span class="hljs-function">def <span class="hljs-title">another</span>():
+x</span> = <span class="hljs-number">0</span>
+</code></pre><p><span>Anche gli </span><strong><span>argomenti</span></strong><span> delle </span><strong><span>funzione entrano nel local scope</span></strong></p><pre><code class="py hljs">def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(x)</span></span>:
+    print(x)
+    x = ‘ciao’
+    print(x)
+    
+x = <span class="hljs-number">5</span>
+<span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(x)</span></span>
+print(x)
+
+# output
+<span class="hljs-number">5</span>
+ciao
+<span class="hljs-number">5</span>
+</code></pre><p><span>Invece se si </span><strong><span>dovessere utilizzare dei metodi agli oggetti</span></strong><span>, finirebbe per essere un passaggio per riferimento e quindi cambierebbe pure il risultato finale.</span></p><p><span>Anche se in realtà, in </span><strong><span>entrambi i casi viene copiato il riferimento</span></strong><span> all’oggetto, ma nel caso della x vi è un riferimento </span><strong><span>sullo stesso oggetto</span></strong><span> puntato dalla x globale invece chiamando append (metodo di una funzione), </span><strong><span>puntano entrambe lo stesso oggetto</span></strong><span>.</span></p><h4 id="Gestione-delle-eccezioni" data-id="Gestione-delle-eccezioni"><a class="anchor hidden-xs" href="#Gestione-delle-eccezioni" title="Gestione-delle-eccezioni"><span class="octicon octicon-link"></span></a><span>Gestione delle eccezioni</span></h4><p><span>Le eccezioni vengono sollevate in due modi:</span></p><ul>
+<li><span>automaticamente: se si presentano anomalie in runtime per esempio una divisione per 0</span></li>
+<li><span>manualmente: tramite il throw o il raise</span></li>
+</ul><p><span>Ovviamente c’è bisogno della sintassi per gestire le eccezioni:</span></p><pre><code class="py hljs"><span class="hljs-keyword">try</span>:
+    codice
+<span class="hljs-keyword">except</span> Classe_eccezione identificativo:
+    codice
+<span class="hljs-keyword">except</span> Altraclasse_eccezione identificativo:
+    codice
+<span class="hljs-keyword">else</span>:
+    codice
+<span class="hljs-keyword">finally</span>:
+    codice
+
+</code></pre><p><span>All’interno delle funzioni si sollevano le eccezioni da riga di comando tramite il </span><strong><span>raise</span></strong></p><pre><code>raise NameException(arg1, arg2)
+</code></pre><h4 id="Decoratori" data-id="Decoratori"><a class="anchor hidden-xs" href="#Decoratori" title="Decoratori"><span class="octicon octicon-link"></span></a><span>Decoratori</span></h4><p><span>Si usano i </span><strong><span>decoratori per aggiungere funzionalità ad una funzione</span></strong><span> (si intende quando dobbiamo utilizzare una funzione per piu risultati)</span></p><p><span>Ad esempio creare una funzione che cronometra il tempo di esecuzione di una funzione.</span><br>
+<span>Farla per tutte le funzioni è lungo, di conseguenza si utilizzano i decoratori</span></p><pre><code class="py hljs"><span class="hljs-comment"># funzione per calcolare in funzione del tempo</span>
+<span class="hljs-comment"># senza parametri</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">time_function</span><span class="hljs-params">(function)</span></span>:
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_function</span><span class="hljs-params">()</span></span>:
+        start = time.time()
+        value = function()
+        <span class="hljs-keyword">end</span> = time.time()
+        print (<span class="hljs-string">"ci ha messo "</span>, <span class="hljs-keyword">end</span> - start, <span class="hljs-string">" secondi"</span>)
+        <span class="hljs-keyword">return</span> value
+    <span class="hljs-keyword">return</span> new_function
+
+F = time_function(fun) <span class="hljs-comment"># passi una funzione per cui vuoi calcolare il tempo</span>
+F() <span class="hljs-comment"># avvi time_function</span>
+</code></pre><p><span>Ovviamente la funzione può avere dei parametri (o X parametri)</span></p><pre><code class="py hljs"><span class="hljs-comment"># funzione per calcolare in funzione del tempo</span>
+<span class="hljs-comment"># con parametri X</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">time_function</span><span class="hljs-params">(function)</span></span>:
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_function</span><span class="hljs-params">(*args, **kwargs)</span></span>:
+        start = time.time()
+        value = function(*args, **kwargs)
+        <span class="hljs-keyword">end</span> = time.time()
+        print (<span class="hljs-string">"ci ha messo "</span>, <span class="hljs-keyword">end</span> - start, <span class="hljs-string">" secondi"</span>)
+        <span class="hljs-keyword">return</span> value
+    <span class="hljs-keyword">return</span> new_function
+
+F = time_function(fun) <span class="hljs-comment"># passi una funzione </span>
+<span class="hljs-comment"># per cui vuoi calcolare il tempo</span>
+F(<span class="hljs-number">5</span>,<span class="hljs-number">2</span>) <span class="hljs-comment"># avvi time_function</span>
+</code></pre><p><strong><span>Per coprire tutti i casi possibili</span></strong><span> basta aggiungere con la sintassi “@”</span></p><pre><code class="py hljs">@time_function
+def func4(x,y,z):
+    time.sleep(random.random()<span class="hljs-operator">*</span>x<span class="hljs-operator">+</span>(y<span class="hljs-operator">-</span>z))
+</code></pre><h3 id="Pdf7---Classi-e-oggetti" data-id="Pdf7---Classi-e-oggetti"><a class="anchor hidden-xs" href="#Pdf7---Classi-e-oggetti" title="Pdf7---Classi-e-oggetti"><span class="octicon octicon-link"></span></a><span>Pdf7 - Classi e oggetti</span></h3><blockquote>
+<p><span>Classe -&gt; definisce variabili e metodi contenuti</span><br>
+<span>Oggetto -&gt; istanza di una classe</span><br>
+<span>Astrazione -&gt; non si guardano i dettagli implementativi (per l’utilizzatore)</span><br>
+<span>Incapsulamento -&gt; protezione degli attributi interni</span><br>
+<span>Ereditarietà -&gt; si ereditano comportamente (meno codice)</span><br>
+<span>Polimorfismo -&gt; comportamento adattabile</span></p>
+</blockquote><p><span>Si crea una classe:</span></p><pre><code class="py hljs"><span class="hljs-keyword">class</span> <span class="hljs-title class_">nome_classe</span>:
+    <span class="hljs-comment">#...metodi, attributi</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">esempio</span>:
+    i = <span class="hljs-number">0</span> <span class="hljs-comment"># attributo di classe</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">met1</span>(<span class="hljs-params">...</span>): <span class="hljs-comment"># metodo</span>
+</code></pre><p><span>La </span><strong><span>classe è essa stessa un oggetto</span></strong><span>, da non confonderre con gli oggetti istanziati dalla classe</span></p><p><span>Utilizzando l’oggetto classe è possibile istanziare oggetti di classe:</span></p><pre><code class="py hljs"><span class="hljs-name">variabile = NomeClasse()</span>
+
+<span class="hljs-comment"># accedere ai contenuti</span>
+<span class="hljs-name">NomeClasse.nome_elemento</span>
+</code></pre><p><span>Gli attributi di classe sono attributi che appartengono all’oggetto classe e non agli oggetti istanziati di quella classe</span></p><p><span>Sono definiti direttamente nel blocco di classe</span></p><pre><code class="py hljs"><span class="hljs-comment">#classe</span>
+class esempio:
+    i = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">a</span> = <span class="hljs-string">'ciao'</span>
+   
+
+<span class="hljs-comment"># come prendere gli oggetti della classe</span>
+<span class="hljs-keyword">a</span> = esempio()
+<span class="hljs-keyword">a</span>.i
+
+esempio.i
+</code></pre><p><strong><span>ATTENZIONE ALL’ASSEGNAMENTO</span></strong><span>: se ho un attributo di classe e un oggetto gia istanziato</span></p><pre><code class="py hljs"><span class="hljs-attribute">nomeclasse</span>.i -&gt; <span class="hljs-number">10</span>
+<span class="hljs-attribute">a</span> = nomeclasse
+
+<span class="hljs-attribute">a</span>.i = <span class="hljs-number">20</span> 
+<span class="hljs-comment">#ora l'oggetto </span>
+<span class="hljs-comment">#ha un suo attributo </span>
+<span class="hljs-comment">#che nasconde quello della classe</span>
+</code></pre><p><span>I metodi vengono dichiarati:</span></p><pre><code class="py hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">esempio</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">metodo1</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, arg1, arg2)</span></span>:
+        ...
+</code></pre><p><span>Si </span><strong><span>definiscono con la parola chiave def</span></strong><span> e hanno come </span><strong><span>primo argomento obbligatorio il riferimeto all’oggetto stesso</span></strong><span>, chiamato </span><strong><span>self</span></strong><span> che permette di accedere ai metodi/attributi dell’oggetto.</span></p><p><span>Per chiamare i </span><strong><span>metodi</span></strong><span>:</span></p><pre><code class="py hljs"><span class="hljs-selector-tag">i</span> = <span class="hljs-built_in">nomeclasse</span>()
+<span class="hljs-selector-tag">i</span><span class="hljs-selector-class">.metodo1</span>
+</code></pre><p><span>Quando si chiama il metodo su oggetto </span><strong><span>non</span></strong><span> si passa il self</span></p><p><span>Siccome il metodo è chiamato su un oggetto specifico l’interprete è a conoscenza che self sarà riferito a quell’oggetto.</span></p><p><span>Come in altri linguaggi anche in python si mette il </span><strong><span>costruttore</span></strong><span>.</span><br>
+<span>Indicato come </span><strong><span>metodo speciale</span></strong><span> che inizializza l’oggetto istanziato</span></p><p><span>All’interno del costruttore si inizializzano gli attributi dell’oggetto (non quelli di classe)</span></p><pre><code class="py hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">esempio</span>():</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, arg1, arg2)</span></span>:
+        <span class="hljs-keyword">self</span>.a
+</code></pre><p><span>Viene chiamato in automatico quando viene istanziato l’oggetto.</span></p><p><span>Una classe può avere </span><strong><span>metodi che possono essere chiamati sulla classe stessa</span></strong><span> invece che sull’istanza:</span></p><ul>
+<li><span>metodi statici: </span><code>@staticmethod</code></li>
+<li><span>metodi class: </span><code>@classmethod</code></li>
+</ul><p><span>statici:</span></p><pre><code class="py hljs"><span class="hljs-keyword">class</span> <span class="hljs-symbol">nomeclasse</span>():
+    @<span class="hljs-symbol">staticmethod</span>
+    <span class="hljs-symbol">def</span> <span class="hljs-symbol">static_method</span>(<span class="hljs-symbol">x</span>):
+        <span class="hljs-symbol">print</span>(<span class="hljs-symbol">x</span>)
+</code></pre><p><span>class:</span></p><pre><code class="py hljs"><span class="hljs-keyword">class</span> <span class="hljs-symbol">nomeclasse</span>():
+    @<span class="hljs-symbol">classmethod</span>
+    <span class="hljs-symbol">def</span> <span class="hljs-symbol">class_method</span>(<span class="hljs-symbol">self,<span class="hljs-symbol">x</span></span>):
+        <span class="hljs-symbol">print</span>(<span class="hljs-symbol">x</span>)
+        
+</code></pre><p><em><strong><span>ATTENZIONE</span></strong></em><span>: in questo caso self è riferito all’oggetto classe e non quello istanziato</span></p><p><span>Questi </span><strong><span>due metodi verrano chiamati e accessibili solo agli attributi di classe</span></strong><span>.</span></p><hr><p><span>Quando si chiama un’oggetto, l’interprete chiama due metodi:</span></p><ul>
+<li><span>quello per creare l’oggetto</span></li>
+<li><span>quello per </span><strong><span>inizializzarlo</span></strong><span> (si intende </span><code>__init__</code><span> non restituisce nulla per esiste gia l’oggeto (è self) e quindi viene solo inizializzato)</span></li>
+</ul><p><span>Per </span><strong><span>creare l’oggetto</span></strong><span> si usa il metodo </span><code>__new__</code><span> che </span><strong><span>tipicamente non viene definito perchè di default</span></strong><span>, prendendo in </span><strong><span>ingresso una classe</span></strong><span> e restituisce un </span><strong><span>oggetto di quella classe</span></strong></p><hr><p><span>I metodi e attributi di una classe in python sono </span><strong><span>pubblici</span></strong><span>. Per renderli </span><strong><span>privati</span></strong><span> si agisce sul nome, le entità che iniziano </span><strong><span>con due underscore __ e terminano con massimo uno _ vengono considerati privati</span></strong></p><pre><code class="py hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">prova</span>():</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
+        <span class="hljs-keyword">self</span>.__priv=<span class="hljs-string">'privato'</span>
+        
+</code></pre><p><span>Ma in realta è un </span><strong><span>mezzo fake</span></strong><span>, perchè le rinomina soltanto cosi da non farle vedere tramite </span><code>nomeclasse.nomeentita</code><span> ma sono comunque accessibili.</span></p><p><span>Quelli che </span><strong><span>iniziano e finiscono con due underscore __ sono metodi speciali</span></strong><span>, vengono chiamati automaticamente dall’interprete in certe situazioni</span></p><p><span>E’ possibile effettuare dell’overloading (</span><strong><span>una sovrascrizione di quelli di default</span></strong><span>) cosi da personalizzare il comportamento.</span></p><p><span>Per esempio come i __</span><strong><span>setattr</span></strong><span>__ e i __</span><strong><span>getattr</span></strong><span>__ per aggiornare un campo in seguito ad una operazione.</span></p><pre><code class="py hljs">def <span class="hljs-constructor">__setattr__(<span class="hljs-params">self</span>, <span class="hljs-params">campo</span>, <span class="hljs-params">valore</span>)</span>:
+    <span class="hljs-keyword">if</span> campo<span class="hljs-operator"> == </span>‘saldo’:
+        #utilizzare il super, NO self!
+        super<span class="hljs-literal">()</span>.<span class="hljs-constructor">__setattr__(<span class="hljs-params">campo</span>, <span class="hljs-params">valore</span>)</span> 
+        self.movimenti.append(valore)
+</code></pre><hr><p><span>Per definire i metodi di accesso agli attributi si utilizzano i Getters e i Setters</span></p><pre><code class="wrap python hljs"><span class="hljs-comment">#esempio tramite metodi </span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Prova</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, x</span>):
+        self.__x_ = x
+        
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">getx</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> self.__x_
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">setx</span>(<span class="hljs-params">self, x</span>):
+        self.x = __x_
+
+a = Prova(<span class="hljs-number">10</span>)
+<span class="hljs-built_in">print</span>(a.getx())
+a.setx(<span class="hljs-number">20</span>)
+</code></pre><p><span>E’ possibile utilizzare il decoratore </span><code>@property</code><span> presente in built-in che permette di </span><strong><span>annotare quelli che sono i getters e i setter per un attributo</span></strong><span>.</span></p><p><span>Con </span><code>@property</code><span> si annota il metodo che deve restituire il valore. Lo si accederà tramite il nome del metodo (che però verrà trattato come attributo)</span></p><p><span>Con </span><code>@&lt;nome&gt;.setter</code><span> si annota il setter dell’attributo.</span></p><pre><code class="py hljs">class Prova:
+    def __init__(<span class="hljs-built_in">self</span>, x):
+         <span class="hljs-built_in">self</span>.__x_ <span class="hljs-operator">=</span> x
+    @property
+    def x(<span class="hljs-built_in">self</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">self</span>.__x_
+    @x.setter
+    def x(<span class="hljs-built_in">self</span>, new_x):
+        <span class="hljs-built_in">self</span>.__x_ <span class="hljs-operator">=</span> new_x
+</code></pre><hr><p><span>Una delle potenzialità dei linguaggi ad oggetti è l’</span><strong><span>ereditarietà</span></strong><span>, con python è </span><strong><span>possibile</span></strong><span> farlo anche in </span><strong><span>ereditarietà</span></strong><span> multipla! Basta mettere il nome della classe da ereditare all’interno delle tonde della creazione.</span></p><pre><code class="py hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Automobile</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
+        <span class="hljs-keyword">self</span>.posizione = <span class="hljs-number">0</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">muoviti</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, l)</span></span>:
+        <span class="hljs-keyword">self</span>.posizione += l
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fuoristrada</span>(<span class="hljs-title">Automobile</span>):</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ridotte</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
+        <span class="hljs-keyword">self</span>.rapporto =<span class="hljs-number">0.01</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">muoviti</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, l)</span></span>:
+        l = l*<span class="hljs-keyword">self</span>.rapporto
+        <span class="hljs-keyword">super</span>().muoviti(I)
+    
+<span class="hljs-comment">#fuoristrada avrà tutto quello che ha automobile e i metodo possono essere sovrascritti</span>
+</code></pre><p><span>Utilizzando la chiave super() richiama il metodo della classe madre</span></p><pre><code class="py hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Automobile</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(<span class="hljs-keyword">self</span>)</span></span>:
+        <span class="hljs-keyword">self</span>.posizione = <span class="hljs-number">0</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">muoviti</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, l)</span></span>:
+        <span class="hljs-keyword">self</span>.posizione += l
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Barca</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">muoviti</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, l)</span></span>:
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">self</span>.<span class="hljs-symbol">affondato:</span>
+            <span class="hljs-keyword">return</span> False
+    
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">anfibio</span>(<span class="hljs-title">Fuoristrada</span>, <span class="hljs-title">Barca</span>)</span>
+    pass
+
+
+<span class="hljs-comment">#prende da entrambi le classi</span>
+
+</code></pre><p><span>Quale metodo </span><strong><span>muoviti</span></strong><span> prende anfibio? Python prende dalle classe figlie, se li non è presente prende dalle classi madri da sinistra a destra</span></p><p><span>Si può accedere all’ordine di risuoluzione tramite il metodo </span><code>mro()</code></p><p><span>__</span><strong><span>bases</span></strong><span>__ è un attributo che indica le classi base.</span><br>
+<span>è praticamente quello che scriviamo tra parentesi nella definizione della classe e può essere modificato</span></p><pre><code class="py hljs">a <span class="hljs-operator">=</span> Anfibio()
+print(Anfibio.__mro__)
+Anfibio.__bases__ <span class="hljs-operator">=</span> (Automobile, Barca)
+print(Anfibio.__mro__)
+</code></pre><h3 id="Pdf8---Classi-e-oggetti-2" data-id="Pdf8---Classi-e-oggetti-2"><a class="anchor hidden-xs" href="#Pdf8---Classi-e-oggetti-2" title="Pdf8---Classi-e-oggetti-2"><span class="octicon octicon-link"></span></a><span>Pdf8 - Classi e oggetti (2)</span></h3><p><span>E’ presente una priorità sull’accesso agli attributi.</span></p><p><span>Infatti tra gli attributi di istanza (self) e gli attributi di classe viene data </span><strong><span>importanza a quello di istanza</span></strong></p><p><span>All’interno di </span><strong><span>dict</span></strong><span> sono </span><strong><span>presenti tutti gli attributi di istanza</span></strong><span>. Ogni volta che si fa un self viene inserito (o nell’init).</span></p><p><span>Ecco una foto della gerarchia:</span></p><p><img src="https://hackmd.io/_uploads/rJ9AJ-iO6.png" alt="1" loading="lazy"></p><h3 id="Pdf-9-e-10---Programmazione-funzionale" data-id="Pdf-9-e-10---Programmazione-funzionale"><a class="anchor hidden-xs" href="#Pdf-9-e-10---Programmazione-funzionale" title="Pdf-9-e-10---Programmazione-funzionale"><span class="octicon octicon-link"></span></a><span>Pdf 9 e 10 - Programmazione funzionale</span></h3><p><span>Esistono diversi paradigmi di programmazione:</span></p><ul>
+<li><strong><span>Imperativo</span></strong><span>: Il programma esegue istruzioni una dietro l’altra e il programmatore scrive le funzioni per risolvere il problema tipo C</span></li>
+<li><strong><span>Ad oggetti</span></strong><span>: Il programma è organizzato in oggetti che esibiscono metodi e incapsulano degli attributi che non vengono esibiti, come Java</span></li>
+</ul><p><span>Ne esistono degli altri, come il </span><strong><span>Funzionale</span></strong><span> e il </span><strong><span>Logico</span></strong></p><hr><p><span>Noi ci andremo a focalizzare sul </span><strong><span>Paradigma Funzionale</span></strong><span>:</span></p><p><span>E’ un tipo di paradigma in stile </span><strong><span>dichiarativo</span></strong><span>, ovvero si </span><strong><span>dichiara che valore</span></strong><span> deve assumere un dato nome.</span></p><p><span>Tipicamente un nome viene assegnato il risultato di una funzione</span></p><p><span>Si dice che utilizza “espressioni” come in matematica.</span></p><p><span>Le </span><strong><span>proprietà principali</span></strong><span> del paradigma </span><strong><span>funzionale</span></strong><span> sono:</span></p><ul>
+<li><strong><span>Le funzioni utilizzate in questo paradigme vengono definite Pure</span></strong><span>: stesso input stesso risultato e non modificano gli argomenti in input</span></li>
+<li><strong><span>Non si usano cicli</span></strong><span>: ma la ricorsione</span></li>
+<li><strong><span>Sono linguaggi di ordini superiori</span></strong><span>: le funzioni posso essere passati come parametri di altre funzioni</span></li>
+<li><strong><span>I nome sono immutabili</span></strong></li>
+</ul><p><span>E in </span><strong><span>python</span></strong><span> abbiamo tutti gli ingredienti per programmare in stile funzionale:</span></p><ul>
+<li><strong><span>funzioni pure</span></strong><span>: Possibile in python basta non modificare in input e il risultato è sempre quello</span></li>
+<li><strong><span>no cicli</span></strong><span>: Possibile, usi la ricorsione in python</span></li>
+<li><strong><span>Ordine superiore</span></strong><span>: Si visto che si può fare in python tutto in oggetto.</span></li>
+<li><strong><span>I nomi sono immutabili:</span></strong><span> se non vengono cambiati rimangono quelli</span></li>
+</ul><p><span>esempio di paradigma funzionale</span></p><pre><code class="python hljs"><span class="hljs-keyword">def</span> <span class="hljs-title function_">fattoriale</span>(<span class="hljs-params">x</span>):
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> x&lt;=<span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> x*fattoriale(x-<span class="hljs-number">1</span>)
+</code></pre><ul>
+<li><span>Stesso risultato in input non cambiano gli argomenti oppure input al problema</span></li>
+<li><span>Ricorsione = no cicli</span></li>
+<li><span>Oggetto funzione ritorna una funzione</span></li>
+<li><span>immutabili, non vengono cambiati mai i nomi</span></li>
+</ul><p><span>NB: </span><strong><span>Utilizzare solo funzioni ricorsive può saturare lo stack</span></strong><span>, per questo python ha un limite di chiamate ricorsive, modificabile tramite:</span></p><pre><code class="py hljs"><span class="hljs-keyword">import</span> <span class="hljs-title">sys</span>
+<span class="hljs-title">sys</span>.<span class="hljs-title">setrecursionlimit</span>(<span class="hljs-operator">&lt;</span><span class="hljs-title">massimo_carattere</span><span class="hljs-operator">&gt;</span>)
+</code></pre><p><span>I </span><strong><span>vantaggi della programmazione funzionale sono</span></strong><span>:</span></p><ul>
+<li><span>Facilità di debug, il risultato dipende dagli argomenti</span></li>
+<li><span>Funzioni piu semplici</span></li>
+<li><span>Struttura piu interpretabile da un compilatore</span></li>
+</ul><p><span>Gli </span><strong><span>svantaggi</span></strong><span> della programmazione funzione sono:</span></p><ul>
+<li><span>Cambio di paradigma implica cambio di abitudini</span></li>
+<li><span>Poco utilizzata: imperativo è piu semplice</span></li>
+</ul><p><span>In tutto questo </span><strong><span>python mette a disposizione degli strumenti</span></strong><span>:</span></p><ol>
+<li><u><strong><span>List Comprehension</span></strong></u><span>: </span><strong><span>costrutto sintattico per la creazione di liste</span></strong><span> senza uso di un ciclo for classico (ma innestato dentro la lista):</span><code>[expression for value in iterable if condition]</code><span>, il </span><strong><span>risultato</span></strong><span> è una lista risultante da tutti i risultati di expression calcolati con ogni value nell’iterable (se la condizione è vera)(es:</span><code>[k*k for k in range(1, n+1)] if n % k ==0</code><span>). Possono esserci anche piu for all’interno.</span></li>
+<li><u><strong><span>Lambda</span></strong></u><span>: Fondamento della programmazione funzionale, ogni funzione ha argomenti e risultato. </span><strong><span>Funzioni Pure</span></strong><span>. Potenzialmente un intero pogramma potrebbe scritto solo con le lambda. Con la sintassi di: </span><code>lambda argomenti: espressione</code><span> può avere qualsiasi numero di argomenti, ma una sola espressione che viene valutata e restituita. (es: map()-&gt;</span><code>lambda x:x*2, iter1</code><span>)</span></li>
+<li><u><strong><span>Map/Reduce</span></strong></u><span>: </span><strong><span>Paradigma distribuito</span></strong><span> per la </span><strong><span>computazione dei dati diviso in due fasi</span></strong><span>, </span><strong><span>mappatura dei dati con filtraggio</span></strong><span> ed elaborazione dei singoli (tramite il map()) e </span><strong><span>riduzione con l’aggragazione</span></strong><span> dei risultati della prima fase. In python esiste reduce() della famglia di </span><strong><span>functools</span></strong><span>, questa funzione esegue in locale e non in un ambiente distribuito. </span><strong><span>Applica ripetutamente una funzione</span></strong><span> di </span><strong><span>due argomenti sugli elementi</span></strong><span> di una </span><strong><span>sequenza</span></strong><span> in modo da ridurre la sequenza in un valore unico. (es:</span><code>somma: reduce(lambda x,y:x+y, [1,2,3,4]</code><span>)</span></li>
+<li><u><strong><span>Eval</span></strong></u><span>: è una funzione che valuta un’espressione </span><strong><span>passata sotto forma di stringa</span></strong><span>, in pratica la stringa viene eseguita dall’interprete come se fosse codice del programma. (es:</span><code>"print('ciao')"</code><span>). Si possono passare anche variabili dal programma “principale”, sia come globali sia come locali al codice della stringa: </span><code>eval(print('ciao'), globals, locals)</code><span> può essere anche usato un’espressione: </span><code>eval("1+1" = 2)</code></li>
+<li><u><strong><span>Exec</span></strong></u><span>: molto simile a Eval ma piu completo visto che può eseguire anche istruzioni e non solo istruzione e può eseguire del codice compilato (si intende il formato medio di python il </span><strong><span>bytecode</span></strong><span>): </span><code>exec("import subprocess")</code><span> e </span><code>exec(compiled)</code></li>
+<li><u><strong><span>Compile</span></strong></u><span>: compila una stringa (o file) in </span><strong><span>bytecode</span></strong><span>. </span><code>compile(source(stringa da compilare), file(il file da compilare, mode(exec, eval, single))</code></li>
+<li><u><strong><span>Functools</span></strong></u><span>: Fornisce funzioni di ordine superiore per eseguire operazioni comuni nella programmazione funzionale: </span><strong><span>partial</span></strong><span> e </span><strong><span>partialmethod</span></strong><span>. Partial rappresenta una funzione in cui alcuni argomenti sono definiti prima di chiamarla invece partialmethod lavora su metodi di classe (ma sono identici):</span></li>
+</ol><pre><code class="py hljs"><span class="hljs-function">def <span class="hljs-title">somma</span>(<span class="hljs-params">x,y</span>):
+    <span class="hljs-keyword">return</span> x+y
+
+sommapartial</span>= <span class="hljs-keyword">partial</span>(somma, y=<span class="hljs-number">1</span>)
+
+<span class="hljs-meta">#Quando si chiama </span>
+<span class="hljs-meta">#sommapartial basterà </span>
+<span class="hljs-meta">#passare un solo argomento </span>
+<span class="hljs-meta">#visto che y è gia stato passato</span>
+</code></pre><p><span>7.1. </span><u><strong><span>cmp_to_key</span></strong></u><span>: appartiene sempre alla famiglia degli functool e trasforma una funzione di comparazione in una funzione chiave.</span><br>
+<span>7.2 </span><u><strong><span>total_orderign</span></strong></u><span>: è un decoratore per classi che fornisce i metodi di confronto per quella classe. Basta scegliere due metodi per avere gli altri:</span></p><pre><code class="wrap python hljs"><span class="hljs-meta">@total_ordering</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">a</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__eq__</span>(<span class="hljs-params">self, other</span>):
+        ...
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__it__</span>(<span class="hljs-params">self,other</span>):
+        ...
+        
+</code></pre><p><span>7.3 </span><u><strong><span>LRU_cache</span></strong></u><span>: è un decoratore che fa in modo di evitare la chiamata ad una funzione se è gia stata invocata con gli stessi parametri, memorizza il risultato e ritorna direttamente quello senza rieseguire, </span><strong><span>la funzione deve essere deterministica</span></strong></p><pre><code>@lru_cache(#maxsize=...) # si può aggiungere anche un limite massimo di memorizzazioni
+def somma(x,y):
+    return x+y
+#Se invoco somma(1,2) piu volte verra eseguita una sola volta
+</code></pre><p><span>8.</span><u><strong><span>Itertools</span></strong></u><span>: è un modulo che fornisce funzioni per genereare sequenze di dati iterabili:</span></p><ul>
+<li><span>iteratori infiniti: count(10)-&gt;10,11,12…, cycle([1,23])-&gt; 1,2,3,1…, repeat(‘a’)-&gt;a,a,a,a…</span></li>
+</ul><h3 id="Pdf11---Struttura-progetto" data-id="Pdf11---Struttura-progetto"><a class="anchor hidden-xs" href="#Pdf11---Struttura-progetto" title="Pdf11---Struttura-progetto"><span class="octicon octicon-link"></span></a><span>Pdf11 - Struttura progetto</span></h3><p><span>Organizzazione di un progetto in piu file, piu leggibilità e navigabile il progetto.</span></p><hr><p><span>I </span><strong><span>moduli</span></strong><span> senza modifiche non vengono ri-compilati</span></p><p><span>In un modulo vi sono piu entita relative a quel modulo e deve finire in certo modo.</span></p><p><span>Piu moduli correlati formano un package, nella quale racchiude piu moduli inerenti alla stessa area del programma.</span></p><p><span>I </span><strong><span>moduli</span></strong><span> corrispondono ai </span><strong><span>file sorgente</span></strong><span>, di conseguenza un file un modulo.</span></p><p><span>All’</span><strong><span>interno del file</span></strong><span> devono essere definite le entità utili per quel modulo come funzioni costanti e classi.</span></p><p><span>Per </span><strong><span>utilizzare un modulo</span></strong><span> esso va importato tramite </span><code>import &lt;modulo&gt;</code><span> (stesse cose che si possono fare con l’esempio del pandas)</span></p><pre><code class="wrap py hljs"><span class="hljs-comment">#import / utilizzo</span>
+import <span class="hljs-variable">&lt;modulo&gt;</span>     <span class="hljs-variable">&lt;modulo&gt;</span>.<span class="hljs-variable">&lt;entità&gt;</span>
+
+<span class="hljs-keyword">from</span> <span class="hljs-variable">&lt;modulo&gt;</span> import <span class="hljs-variable">&lt;entità&gt;</span>
+
+<span class="hljs-keyword">from</span> <span class="hljs-variable">&lt;modulo&gt;</span> import * <span class="hljs-variable">&lt;entita&gt;</span>
+
+</code></pre><p><span>Per </span><strong><span>utilizzare un modulo presente in un package la sintassi è uguale</span></strong><span>.</span></p><pre><code>import &lt;package&gt;.&lt;modulo&gt;
+import &lt;package&gt;.&lt;sub-package&gt;.&lt;modulo&gt;.&lt;entita&gt;
+</code></pre><p><span>Quando si </span><strong><span>importa un modulo</span></strong><span> viene eseguito dal file, quindi è possibile eseguire delle inizializzazioni.</span></p><hr><p><span>Un </span><strong><span>package</span></strong><span> è quindi fatto da piu file (piu </span><strong><span>moduli</span></strong><span>) e corrisponde ad una directory.</span></p><p><span>E’ possibile organizzare in package e in sotto-package</span></p><p><strong><span>NB: PER FAR IN MODO CHE UNA DIRECTORY SIA VISTA COME PACKAGE E’ NECESSARIO INSERIRE DENTRO DI ESSA UN FILE __init__.py (anche vuoto)</span></strong></p><p><span>Anche un package può essere importato, basta inserirlo nel file __init__.py</span></p><p><span>Quando importi i moduli dei package in questa forma</span></p><pre><code>from &lt;package&gt; import *
+
+#per motivi di prestazioni 
+#non si importa mai tutti i moduli.
+</code></pre><p><span>Quindi per dire quali moduli importare da un package all’interno del file __init__.py tramite la lista speciale __all__</span></p><pre><code>__all__=["modulo1",...]
+</code></pre><hr><p><span>L’insieme di package compone il nostro programma.</span><br>
+<span>Se verrà riutilizzato in altri progetti lo chiamiamo </span><strong><span>libreria</span></strong></p><p><span>Oltre le </span><strong><span>librerie</span></strong><span> gia esistenti in python, ha un </span><strong><span>enorme catalogo</span></strong><span> di librerie pronte all’uso.</span></p><p><span>Per </span><strong><span>installare</span></strong><span> una libreria:</span></p><pre><code class="shell hljs">pip3/pip install &lt;libreria&gt;
+</code></pre><p><span>pip è un </span><strong><span>package manager</span></strong><span> che install e rimuove </span><strong><span>librerie python</span></strong><span>, usa come repository principale Pypi</span></p><p><span>Pesca le librerie importate *</span><em><span>import sys -&gt; sys.path.</span></em></p><hr><p><span>Modificando questi </span><strong><span>path</span></strong><span> si possono caricare altri </span><strong><span>package a runtime</span></strong><span> (sys.path è modificabile) o scegliere tra una versione di un package o un’altra.</span></p><p><span>Per evitare conflitti si possono installare due versioni in directory differenti e poi modificare il PYTHONPATH.</span></p><p><span>Oppure crei un ambiente virtuale tramite il venv</span></p><pre><code class="shell hljs"><span class="hljs-meta"># </span><span class="language-bash">creazione</span>
+python3 -m venv /path/to/new/virtual/environment/
+<span class="hljs-meta">
+
+# </span><span class="language-bash">attivazione</span>
+/path/to/new/virtual/environment/
+<span class="hljs-meta">
+# </span><span class="language-bash">disattivazione ambiente</span>
+deactive
+</code></pre><p><span>E’ possibile esportare le versioni delle librerie di una ambiente con pip3</span></p><pre><code class="shell hljs">pip3 freeze &gt; requirements.txt
+<span class="hljs-meta">
+#</span><span class="language-bash">importazione</span>
+pip3 install -r requirements.txt
+</code></pre><hr><p><span>Si possono </span><strong><span>distinguere</span></strong><span> i comportamenti dei moduli tramite dello </span><strong><span>scripting</span></strong><span>.</span></p><p><span>E’ possibile tramite la variabile __name__ che prende il nome del modulo quando viene importato e prende invece __main__ quando il file è lanciato come script.</span></p><p><span>Mettere le istruzioni che si vogliono eseguire dentro un:</span></p><pre><code class="py hljs"><span class="hljs-keyword">if</span> __name__ <span class="hljs-operator">=</span><span class="hljs-operator">=</span> <span class="hljs-string">"__main__"</span>:
+  ...
+</code></pre><p><span>in questo modo lo </span><strong><span>stesso file</span></strong><span> può essere </span><strong><span>importato senza problemi da un altro file</span></strong><span> come se </span><strong><span>fosse un modulo</span></strong><span>.</span></p><hr><p><span>E’ </span><strong><span>importante buildare</span></strong><span> un pacchetto:</span></p><pre><code>pip3 install build
+
+python3 -m build
+</code></pre><p><span>Deve essere presente anche un file </span><strong><span>toml</span></strong><span> che dia i metadati del progetto chiamato </span><strong><span>pyproject.toml</span></strong></p><h3 id="Pdf12---Gestione-della-memoria" data-id="Pdf12---Gestione-della-memoria"><a class="anchor hidden-xs" href="#Pdf12---Gestione-della-memoria" title="Pdf12---Gestione-della-memoria"><span class="octicon octicon-link"></span></a><span>Pdf12 - Gestione della memoria</span></h3><p><span>I </span><strong><span>dati di un programma vengono salvati in memoria</span></strong><span>, a seconda del punto del programma essi vengono salvati in </span><strong><span>due zone differenti</span></strong><span>:</span></p><ul>
+<li><strong><span>heap</span></strong><span>: memoria esplicatemente allocata (int *a = (int)malloc…)</span></li>
+<li><strong><span>stack</span></strong><span>: variabili dichiarate nel codice (int a = 10)</span></li>
+</ul><p><span>Le dimensioni e quando occuparla possono essere decise:</span></p><ul>
+<li><strong><span>Manualmente</span></strong><span>: dal programmatore</span></li>
+<li><strong><span>Automaticamente</span></strong><span>: dal compilatore/interprete (garbage collectr, reference counting)</span></li>
+</ul><p><span>Per </span><strong><span>manuale</span></strong><span> intendiamo come in C l’utilizzo di diversi metodi come </span><strong><span>malloc() e free()</span></strong><span>, per avere una gestione esplicita e molto veloce, ma si rischiano molti memory leak e frequenti errori</span></p><hr><p><span>Il </span><strong><span>reference couting</span></strong><span> è un </span><strong><span>algoritmo che libera memoria</span></strong><span> automaticamente quando un oggetto non è piu referenziato:</span></p><ul>
+<li><span>ogni </span><strong><span>oggetto ha un campo aggiuntivo</span></strong><span> che indica il </span><strong><span>numero effettivo di riferimento</span></strong><span> ad esso</span></li>
+<li><span>appena il </span><strong><span>contatore</span></strong><span> arriva a 0, viene </span><strong><span>distrutto</span></strong><span> l’oggetto.</span></li>
+</ul><p><span>Questo algoritmo ha un problema di </span><strong><span>riferimenti circolari</span></strong><span>. Perchè </span><strong><span>due oggetti si possono referenziare</span></strong><span> a vicenda e anche dopo quando i </span><strong><span>due oggetti non sono piu referenziati altrove essi avranno comunque 1</span></strong><span>, di conseguenza non verrano </span><strong><span>mai distrutti</span></strong><span>.</span></p><p><span>Una possibile soluzione è quella di marcare come deboli i riferimenti ricorsivi e vengono considerati come tali per la rimozione:</span></p><ul>
+<li><span>li uso solo se almeno un oggetto è referenziato altrove</span></li>
+<li><span>maggiore overhead</span></li>
+</ul><hr><p><span>Il </span><strong><span>garbage collector</span></strong><span> è un entità che ciclicamente controlla lo stato degli oggetti in memoria e eventualmente li elimina (liberando memoria)</span></p><p><span>L’</span><strong><span>algoritmo</span></strong><span> che utilizza è il </span><strong><span>tracing</span></strong><span>:</span></p><ul>
+<li><span>Parte da degli oggetti radice segue tutti gli oggetti referenziati</span></li>
+<li><span>Prosegue a cascata</span></li>
+<li><span>Gli oggetti non referenziati vengono considerati garbage e eliminati</span></li>
+</ul><p><span>Per </span><strong><span>oggetti radice</span></strong><span> si intendo:</span></p><ul>
+<li><span>variabili globali</span></li>
+<li><span>variabili locali</span></li>
+<li><span>argomenti di funzioni</span></li>
+</ul><p><span>E non può piu essere raggiungibile per due motivi:</span></p><ul>
+<li><strong><span>ragione sintattica</span></strong><span>: la sintassi indica che ormai quell’oggetto non esiste piu (utilizzata molto dal garbage collector)</span></li>
+<li><strong><span>ragione semantica</span></strong><span>: oggetti non piu raggiungibili per via del flusso di codice</span></li>
+</ul><p><span>E viene utilizzato quando un </span><strong><span>limite della memoria occupata</span></strong><span> raggiunge un </span><strong><span>limite</span></strong><span>.</span></p><p><span>Ogni oggetto viene associata una flag(</span><strong><span>mark and sweep</span></strong><span>)</span></p><ul>
+<li><span>0 : irraggiungibile</span></li>
+<li><span>1 : raggiungibile</span></li>
+</ul><p><span>Il </span><strong><span>garbage effettua prima una fase di scansione dove applica i flag</span></strong><span> e successivamente una fase di deallocazione. (ovviamente i suoi limiti sono piu che evidenti, ogni volta è necessario scansionare tutto)</span></p><hr><p><span>Il garbage collector utilizza anche un altro </span><strong><span>algoritmo</span></strong><span> chiamato </span><strong><span>Tri-color marking</span></strong></p><ol>
+<li><strong><span>White</span></strong><span>: candidati per la rimozione</span></li>
+<li><strong><span>Grey</span></strong><span>: oggetti raggiungibili ma i cui oggetti referenziati da essi non sono stati ancora analizzati</span></li>
+<li><strong><span>Black</span></strong><span>: oggetti raggiungibili che non referenziano nessun oggetto white</span></li>
+</ol><p><span>Viene usato il flusso dal 1 al 3</span></p><hr><p><span>Per </span><strong><span>liberare la memoria</span></strong><span> il garbage utilizza due strategie:</span></p><ul>
+<li><strong><span>in movimento</span></strong><span>: copiare tutti gli oggetti raggiungibili in una nuova area di memoria</span></li>
+<li><strong><span>non in movimento</span></strong><span>: rilascio le zone di memoria dagli oggeti non raggiungibili</span></li>
+</ul><hr><p><span>Python utilizza un </span><strong><span>approccio ibrido</span></strong><span>:</span></p><ul>
+<li><span>reference counting</span></li>
+<li><span>garbage collector</span></li>
+</ul><p><span>il modulo </span><strong><span>gc</span></strong><span> consente di impostare il garbage collector, tramite gc.enable()/disable() ovviamente attivi il garbage.</span></p><p><span>La </span><strong><span>gestione della memoria</span></strong><span> in python </span><strong><span>dipende dall’interprete</span></strong><span>, il piu famoso CPython utilizza reference couting</span></p><pre><code>import sys
+a = 'aaa'
+sys.getrefcount(a) -&gt; 2
+</code></pre><p><span>Esistono diversi programmi per profilare la memoria:</span></p><ul>
+<li><span>memory-profiler</span></li>
+<li><span>tracemalloc</span></li>
+</ul><p><span>Essendo tutto un oggetto in python, l’</span><strong><span>interprete prende grandi aree di memoria</span></strong><span> dal SO e le rende private (heap privato) e le gestisce lui:</span></p><ul>
+<li><span>quando si crea un oggetto l’interprete lo alloca nell’heap privato</span></li>
+<li><span>l’allocatore si occupa di creare in questa zona e gli assegna l’area di memoria</span></li>
+<li><span>Se serve piu memoria chiama malloc() se è piu di 512 byte l’oggetto viene fatto direttamente malloc</span></li>
+</ul><p><span>Le </span><strong><span>zone di memoria</span></strong><span> di allocano in Aree e Pool</span></p><p><span>Ogni Area è divisa in pool per rendere piu efficace la memoria</span></p><p><span>Un </span><strong><span>pool</span></strong><span> ha la dimensione di una pagina stabilita da SO</span></p><p><span>Al </span><strong><span>suo interno ha dei blocchi tutti uguali</span></strong><span>.</span></p><p><span>Ogni </span><strong><span>blocco</span></strong><span> contiene solo un oggetto, appena viene liberato viene considerato libero</span></p><h3 id="Pdf13---Debug" data-id="Pdf13---Debug"><a class="anchor hidden-xs" href="#Pdf13---Debug" title="Pdf13---Debug"><span class="octicon octicon-link"></span></a><span>Pdf13 - Debug</span></h3><p><span>In python si utilizza un modulo per debuggare</span></p><pre><code>import pdb
+
+pdb.run (&lt;stringa di codice&gt;)
+</code></pre><h3 id="Pdf14---Unit" data-id="Pdf14---Unit"><a class="anchor hidden-xs" href="#Pdf14---Unit" title="Pdf14---Unit"><span class="octicon octicon-link"></span></a><span>Pdf14 - Unit</span></h3><p><span>E’ il </span><strong><span>tester di Python</span></strong><span>, viene utilizzato per testare le parti piu piccole di un software</span></p><p><span>Ed è formato da:</span></p><ul>
+<li><strong><span>Test case</span></strong><span>: rappresenta il caso di prova, all’interno un insieme di condizioni.</span></li>
+<li><strong><span>Test suite</span></strong><span>: E’ una raccolta di casi di test che vengono utilizzati per testare un programma software</span></li>
+<li><strong><span>Test runner</span></strong><span>: è an componente che imposta l’esecuzione dei test e fornisce il risultato</span></li>
+</ul><p><span>Per utilizzare il tester si importa il modulo </span><strong><span>unittest</span></strong></p><pre><code class="py hljs"><span class="hljs-keyword">import</span> unittest
+
+value = <span class="hljs-literal">True</span> <span class="hljs-comment"># False</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Foo</span>(unittest.TestCase) <span class="hljs-comment"># eredita da test</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_uno</span>(<span class="hljs-params">self</span>): <span class="hljs-comment">#test da effettuare</span>
+        self.assertTrue(value)<span class="hljs-comment"># si usano gli assets per effettuare le valutazioni</span>
+        <span class="hljs-comment"># se l'assert non va a buon fine allora il test NON e' superato</span>
+        
+unittest.main()
+</code></pre><p><span>Esistono 3 tipi di risultati:</span></p><ul>
+<li><strong><span>OK</span></strong><span>: tutto superato</span></li>
+<li><strong><span>FAIL</span></strong><span>: è presente un test che non è passato e viene attivata una sollecitazione AssertionError</span></li>
+<li><strong><span>ERROR</span></strong><span>: il test solleva un’eccezione diversa da AssertionError</span></li>
+</ul><p><span>Si possono anche mettere dei metodi che preparano il test ed eseguire operazioni dopo l’esecuzione come </span><strong><span>setUp()</span></strong><span> eseguito prima di ogni test.</span></p><h3 id="Pdf15---File-IO" data-id="Pdf15---File-IO"><a class="anchor hidden-xs" href="#Pdf15---File-IO" title="Pdf15---File-IO"><span class="octicon octicon-link"></span></a><span>Pdf15 - File I/O</span></h3><p><span>Per aprire un file si usa l’istruzione “open” e per chiuderlo “close”.</span></p><p><span>Open possiede due parametri, il primo è il pathname del file e il secondo in che modo aprire il file:</span></p><ul>
+<li><span>‘</span><strong><span>r</span></strong><span>’ per leggere</span></li>
+<li><span>‘</span><strong><span>w</span></strong><span>’ per scrivere (azzera il file)</span></li>
+<li><span>‘</span><strong><span>a</span></strong><span>’ per aggiungere ad un file gia presente</span></li>
+<li><span>‘</span><strong><span>b</span></strong><span>’ aprire il file in modalità binaria</span></li>
+</ul><p><span>Ecco alcune operazione:</span></p><pre><code class="python hljs">fd=<span class="hljs-built_in">open</span>(<span class="hljs-string">"miofile"</span>, r)
+
+<span class="hljs-comment"># si può leggere l'intero file su stringa</span>
+fdcontents=fd.read()
+
+<span class="hljs-comment"># anche una sola riga alla volta</span>
+
+fdcontente=fd.readline()
+
+<span class="hljs-comment"># si può eseguire in un ciclo</span>
+
+<span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> fd:
+
+<span class="hljs-comment"># si può scrivere una stringa</span>
+
+fd.<span class="hljs-built_in">open</span>(<span class="hljs-string">"miofile"</span>,w)
+fd.write(s)
+
+<span class="hljs-comment"># si chiude</span>
+
+fd.close()
+</code></pre><p><span>In modalita binaria si salvano bytes grezzi, poi è compito del programmatore saperli poi interpretare:</span></p><pre><code class="wrap python hljs"><span class="hljs-comment"># scrittura</span>
+prova = <span class="hljs-built_in">open</span>(<span class="hljs-string">'prova.bin'</span>,<span class="hljs-string">'wb'</span>)
+prova.write(<span class="hljs-built_in">bytes</span>([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]))
+prova.close()
+
+<span class="hljs-comment">#lettura</span>
+prova2=<span class="hljs-built_in">open</span>(<span class="hljs-string">'prova.bin'</span>,<span class="hljs-string">'rb'</span>)
+a = prova2.read()
+</code></pre><p><span>Esiste l’istruzione “</span><strong><span>with</span></strong><span>” che consente</span></p><pre><code class="py hljs"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">"file"</span>,r) <span class="hljs-keyword">as</span> fd:
+...
+</code></pre><p><span>Esiste un modulo “</span><strong><span>Pickle</span></strong><span>” che permette di salvare oggetti arbitrari su file, </span><strong><span>serializzando il dato</span></strong><span>(tecnica molto comune per trasmettere e salvare dati)</span></p><pre><code>pickle.dump(obj, file) # salva oggetto su file
+pickle.dump(obj) # restitutisce la serializzazione come stringa
+
+pickle.load(file) # legge il file e restituisce l'oggetto
+pickle.loads(data) #legge data(Stringa) e restituisce l'oggetto
+</code></pre><p><span>Attenzione ai </span><strong><span>file scammer</span></strong><span>.</span></p><h3 id="Pdf17---Parsing-Arguments" data-id="Pdf17---Parsing-Arguments"><a class="anchor hidden-xs" href="#Pdf17---Parsing-Arguments" title="Pdf17---Parsing-Arguments"><span class="octicon octicon-link"></span></a><span>Pdf17 - Parsing Arguments</span></h3><p><span>E’ comune su linea di comando passare degli argomenti in input ad un programma.</span></p><p><span>In python è possibile leggerli tramite il modulo “</span><strong><span>sys</span></strong><span>”:</span></p><pre><code class="py hljs"><span class="hljs-comment"># si trovano qui sottoforma di lista</span>
+sys.argv
+</code></pre><p><span>Però c’è bisogno di </span><strong><span>parsare a mano tutti gli argomenti</span></strong><span>.</span><br>
+<span>E per questo esiste il modulo “</span><strong><span>argparse</span></strong><span>” che gestisce automaticamente questi aspetti. Ecco le diversi fasi:</span></p><pre><code class="py hljs"><span class="hljs-comment"># fase di definizione</span>
+import argparse
+parser = argparse.ArgumentParser(description=<span class="hljs-string">'Process some integers'</span>)
+
+<span class="hljs-comment"># Crea un oggetto ArgumentParser con una descrizione generica del programma</span>
+
+
+argparse.add_arguments() <span class="hljs-comment"># si aggiungono gli argomenti che ci si aspetta in input</span>
+
+<span class="hljs-comment"># fase di parsing</span>
+
+arguments = parser.parse.args()
+<span class="hljs-comment"># si analizzano i parametri passati al programma da linea di comando e ritorna un oggetto Namespace con le variabili popolate</span>
+
+<span class="hljs-comment">#es</span>
+parser.add_arguments(<span class="hljs-string">'name'</span>) 
+<span class="hljs-comment"># il primo argomento finirà in name.</span>
+</code></pre></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                
+                
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
