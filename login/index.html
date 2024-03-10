@@ -18,7 +18,7 @@
             var parsedhash = new URLSearchParams(window.location.hash.slice(1));
             if(parsedhash.get('access_token')){
                 var access_token = parsedhash.get('access_token');
-                document.getElementById('access_token').textContent = 'token: ${access_token}';
+                document.getElementById('access_token').textContent = `token: ${access_token}`;
             }
         }
     </script>
