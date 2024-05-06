@@ -1,117 +1,51 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <link rel="stylesheet" href="cssstyle.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indice Appunti</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            color: #007BFF;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
-
-        a:hover {
-            color: #0056b3;
-        }
-
-        hr {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            border: 0;
-            border-top: 2px solid #007BFF;
-        }
-
-        section {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        section h2 {
-			text-align: center;
-            color: #007BFF;
-        }
-		u{
-			color: #007BFF;
-		}
-		p{
-			text-align:center;
-		    background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-			color: #007BFF;
-		}
-    </style>
 </head>
 <body>
-    <u><h1>Appunti creati da: Raimondo Iannone</h1></u>
-	<p>Un semplice sito web per raggruppare tutti i miei appunti senza perderli! </u>
-    	<!-- Inizio delle sezioni degli appunti -->
-	<u><h1> Anno 1 - Semestre I</h1></u>
-	<u><h1> Anno 1 - Semestre II</h1></u>
-	<br></br>
-	<br></br>
-	<u><h1> Anno 2 - Semestre I</h1></u>
-	
-	<h1> Sezione - Sistemi operativi</h1>
-    		<section id="sezione3">
-        		<h2><a href="./manuale.pdf">Manuale dei comandi</a></h2>
-   		 </section>
-
-	<br></br>
-	<br></br>
-	<u><h1> Anno 2 - Semestre II</h1></u>
-		
-	<h1> Sezione - Calcolo numerico</h1>
-    		<section id="sezione3">
-        		<h2><a href="./matlab">Appunti MATLAB</a></h2>
-   		 </section>
-	<section id="sezione3">
-        		<h2>Appunti Teoria</h2>
-   		 </section>
-	<h1> Sezione - Basi di dati</h1>
-    		<section id="sezione3">
-        		<h2><a href="./basi_di_dati">Appunti Basi di dati Teoria</a></h2>
-   		 </section>
-	<br></br>
-	<br></br>
-	<u><h1> Anno 3 - Semestre I</h1></u>
-		
-	<h1> Sezione - Complementi</h1>
-    <section id="sezione1">
-        <h2><a href="./complementi">Appunti Complementi Teoria</a></h2>
-    </section>
-
-    <section id="sezione2">
-        <h2><a href="./complementi_pratico">Appunti Complementi Pratico</a></h2>
-        <!-- Contenuto della seconda sezione degli appunti -->
-    </section>
+    <u><h1>UniIanno</h1></u>
+	<p>Un semplice sito web per raggruppare tutti i miei appunti senza perderli! tutto open source</p>
+    <!-- Inizio delle sezioni degli appunti -->
+    <div class="container">
+        <div class="box">
+            <h2>Anno 1</h2>
+            <ul>
+                <li>Analisi matematica</li>
+                <li>Algebra lineare</li>
+                <li>Programmazione 1</li>
+                <li>Architettura dei calcolatori</li>
+                <li>Algoritmi e strutture dati</li>
+                <li>Programmazione 2</li>
+            </ul>
+        </div>
+	    <div class="box">
+            <h2>Anno 2</h2>
+            <ul>
+                <a href="./fisica/index.html"><li>Fisica</li></a>
+                <a href="./programmazione ad oggetti/index.html"><li>Programmazione a oggetti</li></a>
+                <li>Statistica ed elementi di probabilità</li>
+                <li>Apprendimento ed evoluzione in sistemi artificiali</li>
+                <a href="./basididati/index.html"><li>Basi di dati</li></a>
+                <a href="./calcolo/index.html"><li>Calcolo Numerico</li></a>
+                <a href="./manuale.pdf"><li>Sistemi operativi</li></a>
+                <li>Ottimizzazione Lineare Intera</li>
+            </ul>
+        </div>
+	    <div class="box">
+            <h2>Anno 3</h2>
+            <ul>
+                <a href="./complementi/index.html"><li>Complementi di Programmazione</li></a>
+                <li>Linguaggi e compilatori</li>
+                <li>Tirocinio e Tesi</li>
+                <li>Progetto del software</li>
+                <li>Protocolli e architetture di rete</li>
+                <li>Tecnologie web</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
